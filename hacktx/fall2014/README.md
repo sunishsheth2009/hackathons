@@ -1,10 +1,13 @@
+Vimm  
+====
+
 facebook integration for vim
-============================
+----------------------------
 
-HackTX Fall 2014
-----------------
+### HackTX Fall 2014
 
-![demo](https://github.com/dchengy/hackathons/blob/master/hacktx/fall2014/images/FBVIMDemo.png)
+![LikesDemo](https://github.com/dchengy/hackathons/blob/master/hacktx/fall2014/images/VimmLikesDemo.png)
+![ShareDemo](https://github.com/dchengy/hackathons/blob/master/hacktx/fall2014/images/VimmShareDemo.png)
 
 ### Outline
 - [ ] public usage (requires app approval)  

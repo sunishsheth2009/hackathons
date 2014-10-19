@@ -42,3 +42,6 @@ Thumbs.db
 # makefiles
 Makefile
 makefile
+
+# status likes
+*.likes

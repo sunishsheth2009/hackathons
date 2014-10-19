@@ -4,7 +4,7 @@ facebook integration for vim
 HackTX Fall 2014
 ----------------
 
-![demo](/images/FBVIMDemo.png?raw=true)
+![demo](https://github.com/dchengy/hackathons/blob/master/hacktx/fall2014/images/FBVIMDemo.png)
 
 ### Outline
 - [ ] public usage (requires app approval)  

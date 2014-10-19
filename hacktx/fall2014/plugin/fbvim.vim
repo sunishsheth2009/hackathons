@@ -13,8 +13,7 @@ python << endOfPython
 
 from fbvim import fb_login
 
-file_name = str(vim.eval('expand("%:t")')) # for file name only: .split('.')[0]
-fb_login(file_name)
+fb_login(str(vim.eval('expand("%:t")'))) # for file name only: .split('.')[0]
 
 print 'waiting on app review'
 
@@ -34,21 +33,15 @@ endfunction
 function! FBShare(lineNum)
 python << endOfPython
 
-from fbvim import fb_share
-
-token = 'n/a'
+from fbvim import fb_share, write_meta_file
 
 vim_buff = list(vim.current.buffer)
 line_num = int(vim.eval('a:lineNum')) - 1
 vim_line = vim_buff[line_num]
 
 print 'sharing line ' + str(line_num + 1) + ' to facebook'
-status_id = fb_share(token, vim_line)
-file_name = str(vim.eval('expand("%:t")'))
-meta_file_name = '.' + file_name + '.likes'
-meta_file = open(meta_file_name, 'a')
-meta_file.write(str(line_num + 1) + ',' + str(status_id) + '\n')
-meta_file.close()
+status_id = fb_share(vim_line)
+write_meta_file(str(line_num + 1) + ',' + str(status_id) + ',0')
 
 endOfPython
 endfunction

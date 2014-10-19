@@ -59,3 +59,5 @@ endfunction
 command! FBLogin call FBLogin()
 command! FBLogout call FBLogout()
 command! -nargs=1 FBShare call FBShare(<f-args>)
+" Make sure to end the update thread on exit
+autocmd VimLeave * call FBLogout()

@@ -1,12 +1,14 @@
 import facebook
 import time
 import threading
+import vim
 
 update_stop = threading.Event()
 meta_sema = threading.Semaphore(1)
-meta_file_name = ""
+meta_file_name = ''
 user_token = 'n/a'
 graph = facebook.GraphAPI(user_token)
+changed = False
 
 def fb_login(file_name):
     # TODO: LOG IN
@@ -37,6 +39,7 @@ def get_num_likes(status_id):
     return num_likes
 
 def update():
+    global changed
     while(not update_stop.is_set()):
         meta_file = open(meta_file_name, 'r+')
         lines = meta_file.read().splitlines()
@@ -48,9 +51,13 @@ def update():
             status_id = entries[1]
             num_likes = entries[2]
             remote_likes = get_num_likes(str(status_id))
+            if(remote_likes != num_likes):
+                changed = True
             meta_file.write(str(line_num) + ',' + str(status_id) + ',' + str(remote_likes) + '\n')
         meta_file.close()
-        # update_stop.wait(3)
+        if(changed):
+            write_likes()
+        update_stop.wait(1)
  
 def write_meta_file(entry, perm='a'):
     meta_sema.acquire()
@@ -58,3 +65,26 @@ def write_meta_file(entry, perm='a'):
     meta_file.write(str(entry) + '\n')
     meta_file.close()
     meta_sema.release() 
+
+def write_likes():
+    num_lines = len(list(vim.current.buffer))
+    # vim.command("bn")
+    vim_buffer = list(vim.current.buffer)
+    meta_sema.acquire()
+    meta_file = open(meta_file_name, 'r')
+    lines = meta_file.read().splitlines()
+    meta_file.close()
+    meta_sema.release()
+    line_likes = {}
+    for line in lines:
+        entries = str(line).split(',')
+        line_likes[int(entries[0])] = int(entries[2])
+    new_buffer = []
+    for i in range(1, num_lines + 1):
+        # new_buffer.append('\n' if i not in line_likes.keys() else str(line_likes[i]) + ' likes\n')
+        if(i in line_likes.keys()):
+            new_buffer.append(str(line_likes[i]) + ' likes\n')
+        else:
+            new_buffer.append('\n')
+    vim.buffers[1][:] = new_buffer
+    # vim.command("bn")

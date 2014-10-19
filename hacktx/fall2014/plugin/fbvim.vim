@@ -9,6 +9,10 @@ python sys.path.append(vim.eval('expand("<sfile>:h")'))
 "  Function(s)
 " --------------------------------
 function! FBLogin()
+execute "set scrollbind"
+execute "12vsplit .like_buffer"
+execute "set scrollbind"
+execute "normal \<C-w>\<C-w>"
 python << endOfPython
 
 from fbvim import fb_login

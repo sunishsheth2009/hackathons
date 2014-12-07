@@ -42,7 +42,7 @@ public class Scraper {
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(SCHEDS_FILE), "utf-8"));
-            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+            String timeStamp = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(Calendar.getInstance().getTime());
             writer.write("retrieved: " + timeStamp);
             writer.newLine();
             for(String team : scheds.keySet()) {

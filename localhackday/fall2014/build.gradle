@@ -2,19 +2,12 @@ apply plugin: 'java'
 archivesBaseName = 'NBAOracle'
 version = '1.0'
 apply plugin: 'application'
-mainClassName = 'Scraper'
+mainClassName = 'NBAOracle'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile 'org.jsoup:jsoup:1.7.2'
-}
-
-jar {
-    manifest {
-        // fix this
-        // attributes('Main-Class': 'Scraper', 'Class-Path': configurations.compile.collect { it.getName() }.join(' '))
-    }
+    compile 'org.jsoup:jsoup:1.7.2', group: 'com.google.guava', name: 'guava', version: '12.0'
 }

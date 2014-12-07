@@ -2,6 +2,8 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class NBAOracle {
 
@@ -43,6 +45,9 @@ public class NBAOracle {
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(RANKINGS_FILE), "utf-8"));
+            String timeStamp = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(Calendar.getInstance().getTime());
+            writer.write("retrieved: " + timeStamp);
+            writer.newLine();
             int rank = 1;
             for(Team t : nba.getRankedTeams()) {
                 writer.write((rank++) + ". " + t.name());
@@ -64,7 +69,7 @@ public class NBAOracle {
 
     public static void main(String[] args) {
         NBAOracle oracle = new NBAOracle();
-        //oracle.sow();
+        oracle.sow();
         oracle.harvest();
         oracle.forget();
         oracle.predict();

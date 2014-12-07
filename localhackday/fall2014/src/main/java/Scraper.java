@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Scraper {
 
@@ -40,6 +42,9 @@ public class Scraper {
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(SCHEDS_FILE), "utf-8"));
+            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+            writer.write("retrieved: " + timeStamp);
+            writer.newLine();
             for(String team : scheds.keySet()) {
                 for(String opponent : scheds.get(team)) {
                     writer.write(team + "~" + opponent);
@@ -61,6 +66,9 @@ public class Scraper {
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(STATS_FILE), "utf-8"));
+            String timeStamp = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(Calendar.getInstance().getTime());
+            writer.write("retrieved: " + timeStamp);
+            writer.newLine();
             for(Table.Cell<String, String, String> cell: tab.cellSet()) {
                 writer.write(cell.getRowKey() + "~" + cell.getColumnKey() + "~" + cell.getValue());
                 writer.newLine();

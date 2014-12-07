@@ -46,6 +46,7 @@ public class League {
     private void initScheds(BufferedReader reader) {
         try {
             reader = new BufferedReader(new FileReader(Scraper.SCHEDS_FILE));
+            reader.readLine(); // skip timestamp
             String line = "";
             while((line = reader.readLine()) != null) {
                 String[] entries = line.split("~");
@@ -70,6 +71,7 @@ public class League {
     private void initStats(BufferedReader reader) {
         try {
             reader = new BufferedReader(new FileReader(Scraper.STATS_FILE));
+            reader.readLine(); // skip timestamp
             String line = "";
             while((line = reader.readLine()) != null) {
                 String[] entries = line.split("~");

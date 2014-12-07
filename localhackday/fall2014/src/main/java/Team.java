@@ -1,20 +1,25 @@
 import java.util.HashMap;
-import java.util.ArrayList;
 
 public class Team {
 
     private String name;
-    private String abbr;
     private HashMap<String, String> stats;
     private Schedule sched;
     private int score;
 
     public Team(String s) {
         name = s;
-        abbr = "default"; // fix this
         stats = new HashMap<String, String>();
         sched = new Schedule();
         score = 0;
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public Schedule getSched() {
+        return sched;
     }
 
     public int score() {

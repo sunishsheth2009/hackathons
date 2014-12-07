@@ -2,23 +2,29 @@ import java.util.ArrayList;
 
 public class Schedule {
 
-    private ArrayList<Team> opponents;
+    private ArrayList<Game> games;
     private int strength;
 
     public Schedule() {
-        opponents = new ArrayList<Team>();
+        games = new ArrayList<Game>();
         strength = 0;
     }
 
-    public void add(Team team) {
-        opponents.add(team);
+    public void add(Game g) {
+         games.add(g);
     }
 
     public void sos() {
-        for(Team team : opponents) {
-            strength += team.score();
+        for(Game g : games) {
+            strength += g.opponent().score();
         }
-        strength /= opponents.size();
+        strength /= games.size();
+    }
+
+    public void print() {
+        for(Game g : games) {
+            g.print();
+        }
     }
 
 }

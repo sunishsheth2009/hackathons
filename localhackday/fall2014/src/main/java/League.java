@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.TreeSet;
+import java.util.Set;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,6 +13,18 @@ public class League {
         teams = new HashMap<String, Team>();
     }
 
+    public TreeSet<Team> getRankedTeams() {
+        TreeSet<Team> output = new TreeSet<Team>();
+        for(String name : teams.keySet()) {
+            output.add(teams.get(name));
+        }
+        return output;
+    }
+    
+    public Set<String> getTeams() {
+        return teams.keySet();
+    }
+
     public Team get(String team) {
         return teams.get(team);
     }
@@ -20,6 +34,13 @@ public class League {
         BufferedReader reader = null;
         initStats(reader);
         initScheds(reader);        
+    }
+
+    public void crunch() {
+        for(String t : teams.keySet()) {
+            teams.get(t).crunch();
+            teams.get(t).print();
+        }
     }
 
     private void initScheds(BufferedReader reader) {

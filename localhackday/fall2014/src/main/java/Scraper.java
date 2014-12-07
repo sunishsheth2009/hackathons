@@ -17,6 +17,7 @@ public class Scraper {
     public static final String STATS_FILE = ".stats.nba";
     public static final String SCHEDS_FILE = ".scheds.nba";
     private static final String BASE_URL = "http://espn.go.com/nba/statistics";
+    private static final int TIMEOUT = 10;
     private Document doc;
     private Table<String, String, String> tab;
     private HashMap<String, String> abbrs;
@@ -76,6 +77,7 @@ public class Scraper {
 
     public void dump() {
         System.out.println("dumping scraped data:");
+        System.out.println("=======================================");
         for(Table.Cell<String, String, String> cell : tab.cellSet()) {
             System.out.println("[" + cell.getRowKey() + "] " + cell.getColumnKey() + ": " + cell.getValue());
             System.out.println("=======================================");
@@ -90,6 +92,7 @@ public class Scraper {
     }
 
     public void getStats() {
+        getRpiStats();
         getHollingerStats();
         getTeamStandings();
         getTeamStats();
@@ -107,6 +110,11 @@ public class Scraper {
 
     public void clear() {
         tab.clear();
+    }
+
+    public void getRpiStats() {
+        String rpiStatsUrl = "http://espn.go.com/nba/stats/rpi";
+        readStatTable(rpiStatsUrl, "rpi stats");
     }
 
     public void getHollingerStats() {
@@ -128,7 +136,7 @@ public class Scraper {
             System.out.println("getting schedule for " + team);
             try {
                 String teamSchedUrl = "http://espn.go.com/nba/team/schedule/_/name/" + abbrs.get(team) + "/" + team;
-                doc = Jsoup.connect(teamSchedUrl).get();
+                doc = Jsoup.connect(teamSchedUrl).timeout(TIMEOUT*1000).get();
                 Element table = doc.select("table").first();
                 ArrayList<String> opponents = new ArrayList<String>();
                 Elements rows = table.select("tr:not(.stathead, .colhead)");
@@ -153,15 +161,18 @@ public class Scraper {
     private void readStatTable(String url, String type) {
         System.out.println("getting " + type + "...");
         try {
-            doc = Jsoup.connect(url).get();
+            doc = Jsoup.connect(url).timeout(TIMEOUT*1000).get();
             Element table = doc.select("table").first();
             Element header = table.select("tr.colhead").last();
             ArrayList<String> cols = new ArrayList<String>();
             Elements titles = header.select("td:not([align=left])");
             for(Element title : titles) {
-                if(title.child(0).tagName().equals("a")) {
+                if(title.hasAttr("title")) { // title in td element
+                    cols.add(title.attr("title"));
+                }
+                else if(title.child(0).tagName().equals("a")) { // title in link
                     cols.add(title.select("a").attr("title"));
-                } else {
+                } else { // title in span
                     cols.add(title.select("span").attr("title"));
                 }
             }
@@ -174,7 +185,9 @@ public class Scraper {
                 Elements stats = row.select("td:not([align=left])");
                 int i = 0;
                 for(Element stat : stats) {
-                    tab.put(team.text(), cols.get(i++), stat.text());
+                    //if(!tab.contains(team.text(), cols.get(i))) {
+                        tab.put(team.text(), cols.get(i++), stat.text());
+                    //}
                 }
             }
         } catch(IOException e) {

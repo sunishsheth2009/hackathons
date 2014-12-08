@@ -1,211 +1,211 @@
-retrieved: Sun, 7 Dec 2014 21:28:52 -0600
+created: Sun, 7 Dec 2014 21:54:39 -0600
 1. Golden State
-overall score: 58.28535834312333
-winningness: 2.5874958871261855
-offense: 111.15769
-defense: 46.09999999999999
-secondary: -0.2961385281385305
-efficiency: 12.55
+overall: 58.2854
+winningness: 2.5875
+offense: 111.1577
+defense: 46.1000
+secondary: -0.2961
+efficiency: 12.5500
 2. San Antonio
-overall score: 54.75836299565316
-winningness: 2.267212340425532
-offense: 103.70792
-defense: 42.49999999999999
-secondary: 2.0678655913978474
-efficiency: 7.767899999999996
+overall: 54.7584
+winningness: 2.2672
+offense: 103.7079
+defense: 42.5000
+secondary: 2.0679
+efficiency: 7.7679
 3. Portland
-overall score: 54.08521300335171
-winningness: 2.208794585392641
-offense: 103.95788
-defense: 43.099999999999994
-secondary: 1.8977011494252949
-efficiency: 6.879900000000009
+overall: 54.0852
+winningness: 2.2088
+offense: 103.9579
+defense: 43.1000
+secondary: 1.8977
+efficiency: 6.8799
 4. LA Clippers
-overall score: 50.19753652401524
-winningness: 2.19992299732906
-offense: 108.65764
-defense: 36.1
-secondary: -1.57710144927536
-efficiency: 8.238800000000008
+overall: 50.1975
+winningness: 2.1999
+offense: 108.6576
+defense: 36.1000
+secondary: -1.5771
+efficiency: 8.2388
 5. Houston
-overall score: 49.84436273410188
-winningness: 1.851653149920255
-offense: 97.15713000000002
-defense: 49.89999999999999
-secondary: 1.3657852348993273
-efficiency: 5.506200000000002
+overall: 49.8444
+winningness: 1.8517
+offense: 97.1571
+defense: 49.9000
+secondary: 1.3658
+efficiency: 5.5062
 6. Memphis
-overall score: 48.36799394612795
-winningness: 1.9667407946127948
-offense: 102.20773000000001
-defense: 40.000000000000014
-secondary: -0.36532000000000375
-efficiency: 6.2435999999999945
+overall: 48.3680
+winningness: 1.9667
+offense: 102.2077
+defense: 40.0000
+secondary: -0.3653
+efficiency: 6.2436
 7. Toronto
-overall score: 45.53059570185093
-winningness: 1.7240653701850928
-offense: 109.85801
-defense: 30.0
+overall: 45.5306
+winningness: 1.7241
+offense: 109.8580
+defense: 30.0000
 secondary: -0.4224
-efficiency: 7.4074000000000035
+efficiency: 7.4074
 8. Dallas
-overall score: 44.418444149872066
-winningness: 1.8207932059142284
-offense: 107.30765
-defense: 24.79999999999999
-secondary: -1.0575779092702147
-efficiency: 8.465599999999998
+overall: 44.4184
+winningness: 1.8208
+offense: 107.3077
+defense: 24.8000
+secondary: -1.0576
+efficiency: 8.4656
 9. Washington
-overall score: 43.72706663474091
-winningness: 1.3541211792635657
-offense: 100.45743999999999
-defense: 40.8
-secondary: 1.3697368421052534
-efficiency: 5.646299999999992
+overall: 43.7271
+winningness: 1.3541
+offense: 100.4574
+defense: 40.8000
+secondary: 1.3697
+efficiency: 5.6463
 10. Cleveland
-overall score: 41.95284933935566
-winningness: 1.4769109600225225
-offense: 101.95768999999999
-defense: 32.3
-secondary: 0.00852173913043669
-efficiency: 3.2368000000000055
+overall: 41.9528
+winningness: 1.4769
+offense: 101.9577
+defense: 32.3000
+secondary: 0.0085
+efficiency: 3.2368
 11. Atlanta
-overall score: 41.626362542737866
-winningness: 1.6733967479674798
-offense: 102.10786
-defense: 32.49999999999999
-secondary: -2.403186936936932
-efficiency: 3.7401000000000058
+overall: 41.6264
+winningness: 1.6734
+offense: 102.1079
+defense: 32.5000
+secondary: -2.4032
+efficiency: 3.7401
 12. Chicago
-overall score: 38.66341486306174
-winningness: 1.2391731781094528
-offense: 98.95763999999998
-defense: 31.700000000000003
-secondary: -0.09120491803278835
-efficiency: 2.313600000000006
+overall: 38.6634
+winningness: 1.2392
+offense: 98.9576
+defense: 31.7000
+secondary: -0.0912
+efficiency: 2.3136
 13. Sacramento
-overall score: 36.99528578929625
-winningness: 0.8419876932153392
-offense: 95.20793
-defense: 31.29999999999999
-secondary: 3.3501428571428553
-efficiency: -0.7631999999999973
+overall: 36.9953
+winningness: 0.8420
+offense: 95.2079
+defense: 31.3000
+secondary: 3.3501
+efficiency: -0.7632
 14. Denver
-overall score: 36.09611398310979
-winningness: 1.1333305255837058
-offense: 93.55748000000001
-defense: 25.29999999999999
-secondary: 1.1202727272727286
-efficiency: -1.2895999999999972
+overall: 36.0961
+winningness: 1.1333
+offense: 93.5575
+defense: 25.3000
+secondary: 1.1203
+efficiency: -1.2896
 15. Phoenix
-overall score: 35.48898981735951
-winningness: 1.0854937567359508
-offense: 99.90817999999997
-defense: 30.200000000000006
-secondary: -1.6653437499999957
-efficiency: 2.777600000000011
+overall: 35.4890
+winningness: 1.0855
+offense: 99.9082
+defense: 30.2000
+secondary: -1.6653
+efficiency: 2.7776
 16. Milwaukee
-overall score: 34.411247315315315
-winningness: 0.8386220315315316
-offense: 93.40781
-defense: 35.599999999999994
-secondary: 0.11797500000000144
-efficiency: 1.0549000000000082
+overall: 34.4112
+winningness: 0.8386
+offense: 93.4078
+defense: 35.6000
+secondary: 0.1180
+efficiency: 1.0549
 17. Oklahoma City
-overall score: 34.14482147920164
-winningness: 0.8156994812534974
-offense: 86.20726
-defense: 45.60000000000003
-secondary: -0.05436533333333854
-efficiency: -3.1926000000000054
+overall: 34.1448
+winningness: 0.8157
+offense: 86.2073
+defense: 45.6000
+secondary: -0.0544
+efficiency: -3.1926
 18. Indiana
-overall score: 33.736779637626675
-winningness: 0.7210021131879543
-offense: 85.10725000000001
-defense: 34.20000000000002
-secondary: 3.116988505747126
-efficiency: -4.516799999999997
+overall: 33.7368
+winningness: 0.7210
+offense: 85.1073
+defense: 34.2000
+secondary: 3.1170
+efficiency: -4.5168
 19. Miami
-overall score: 30.400663261734998
-winningness: 0.959563098395722
-offense: 90.55735999999999
-defense: 30.100000000000005
-secondary: -3.1051597222222216
-efficiency: -2.212799999999992
+overall: 30.4007
+winningness: 0.9596
+offense: 90.5574
+defense: 30.1000
+secondary: -3.1052
+efficiency: -2.2128
 20. New Orleans
-overall score: 28.912520484642624
-winningness: 0.47855277887788794
-offense: 91.95719
-defense: 29.799999999999997
-secondary: -0.05362530413625258
-efficiency: -1.7082000000000108
+overall: 28.9125
+winningness: 0.4786
+offense: 91.9572
+defense: 29.8000
+secondary: -0.0536
+efficiency: -1.7082
 21. Brooklyn
-overall score: 28.825189769332205
-winningness: 0.5575700387337059
-offense: 89.75778000000001
-defense: 32.70000000000001
-secondary: -1.0244866180048644
-efficiency: -2.175799999999997
+overall: 28.8252
+winningness: 0.5576
+offense: 89.7578
+defense: 32.7000
+secondary: -1.0245
+efficiency: -2.1758
 22. Boston
-overall score: 28.75672156548385
-winningness: 0.5520547343261628
-offense: 92.55751
-defense: 19.699999999999992
-secondary: 1.0158222222222242
-efficiency: -2.311499999999997
+overall: 28.7567
+winningness: 0.5521
+offense: 92.5575
+defense: 19.7000
+secondary: 1.0158
+efficiency: -2.3115
 23. Orlando
-overall score: 28.33380513611352
-winningness: 0.6530101802780193
-offense: 86.90728999999999
-defense: 28.500000000000007
-secondary: -0.7827146666666728
-efficiency: -4.9503999999999895
+overall: 28.3338
+winningness: 0.6530
+offense: 86.9073
+defense: 28.5000
+secondary: -0.7827
+efficiency: -4.9504
 24. LA Lakers
-overall score: 23.880283767985606
-winningness: 0.4711777101318944
-offense: 87.35749999999999
-defense: 14.200000000000001
-secondary: -0.4185333333333352
-efficiency: -7.244599999999992
+overall: 23.8803
+winningness: 0.4712
+offense: 87.3575
+defense: 14.2000
+secondary: -0.4185
+efficiency: -7.2446
 25. Utah
-overall score: 20.908815259919578
-winningness: -0.10572191117618357
-offense: 85.35734
-defense: 22.799999999999994
-secondary: 0.8895663716814145
-efficiency: -5.550000000000001
+overall: 20.9088
+winningness: -0.1057
+offense: 85.3573
+defense: 22.8000
+secondary: 0.8896
+efficiency: -5.5500
 26. New York
-overall score: 18.709030267697987
-winningness: -0.23505524277456646
-offense: 85.80776
-defense: 28.200000000000003
-secondary: -1.2083693045563488
-efficiency: -5.336000000000011
+overall: 18.7090
+winningness: -0.2351
+offense: 85.8078
+defense: 28.2000
+secondary: -1.2084
+efficiency: -5.3360
 27. Minnesota
-overall score: 18.006217267532804
-winningness: 0.057426855148342004
-offense: 83.45742999999999
-defense: 11.700000000000006
-secondary: -0.4896172839506153
-efficiency: -11.099200000000003
+overall: 18.0062
+winningness: 0.0574
+offense: 83.4574
+defense: 11.7000
+secondary: -0.4896
+efficiency: -11.0992
 28. Charlotte
-overall score: 17.92504690085638
-winningness: -0.22719434469696975
-offense: 80.80743000000001
-defense: 24.599999999999987
-secondary: -0.13169565217392296
-efficiency: -7.528
+overall: 17.9250
+winningness: -0.2272
+offense: 80.8074
+defense: 24.6000
+secondary: -0.1317
+efficiency: -7.5280
 29. Philadelphia
-overall score: 16.750607163405878
-winningness: -0.1471500360403652
-offense: 73.05664000000002
-defense: 30.600000000000023
-secondary: -1.3403904761904786
-efficiency: -11.688300000000003
+overall: 16.7506
+winningness: -0.1472
+offense: 73.0566
+defense: 30.6000
+secondary: -1.3404
+efficiency: -11.6883
 30. Detroit
-overall score: 16.65089302325581
-winningness: -0.50514
+overall: 16.6509
+winningness: -0.5051
 offense: 80.6569
-defense: 29.200000000000003
-secondary: 0.516093023255814
-efficiency: -7.851799999999997
+defense: 29.2000
+secondary: 0.5161
+efficiency: -7.8518

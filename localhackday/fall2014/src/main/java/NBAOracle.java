@@ -48,23 +48,23 @@ public class NBAOracle {
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(RANKINGS_FILE), "utf-8"));
             String timeStamp = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(Calendar.getInstance().getTime());
-            writer.write("retrieved: " + timeStamp);
+            writer.write("created: " + timeStamp);
             writer.newLine();
             int rank = 1;
             for(Team t : nba.getRankedTeams()) {
                 writer.write((rank++) + ". " + t.name());
                 writer.newLine();
-                writer.write("overall score: " + t.getOverall());
+                writer.write("overall: " + String.format("%.4f", t.getOverall()));
                 writer.newLine();
-                writer.write("winningness: " + t.getWinningness());
+                writer.write("winningness: " + String.format("%.4f", t.getWinningness()));
                 writer.newLine();
-                writer.write("offense: " + t.getOffense());
+                writer.write("offense: " + String.format("%.4f", t.getOffense()));
                 writer.newLine();
-                writer.write("defense: " + t.getDefense());
+                writer.write("defense: " + String.format("%.4f", t.getDefense()));
                 writer.newLine();
-                writer.write("secondary: " + t.getSecondary());
+                writer.write("secondary: " + String.format("%.4f", t.getSecondary()));
                 writer.newLine();
-                writer.write("efficiency: " + t.getEfficiency());
+                writer.write("efficiency: " + String.format("%.4f", t.getEfficiency()));
                 writer.newLine();
             }
         } catch(IOException e) {

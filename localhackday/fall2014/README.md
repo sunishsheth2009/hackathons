@@ -27,7 +27,7 @@ __secondary__: miscellaneous stats including rebounds, turnovers, and assists
 _formula_: `(((rr + drr + orr) / 3) - 50) - (tr / 100) * (t / ot) + (ar / 100)`  
 
 __efficiency__: overall team efficiency calculated by Hollinger stats  
-_formula_: `(pf / 100) * (oe - de)  
+_formula_: `(pf / 100) * (oe - de)`  
 
 more stats coming...  
 

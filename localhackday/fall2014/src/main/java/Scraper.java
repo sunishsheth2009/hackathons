@@ -100,6 +100,7 @@ public class Scraper {
     }
 
     public void getStats() {
+        getMiscStats();
         getRpiStats();
         getHollingerStats();
         getTeamStandings();
@@ -118,6 +119,11 @@ public class Scraper {
 
     public void clear() {
         tab.clear();
+    }
+
+    public void getMiscStats() {
+        String miscStatsUrl = "http://espn.go.com/nba/statistics/team/_/stat/miscellaneous-per-game";
+        readStatTable(miscStatsUrl, "misc stats");
     }
 
     public void getRpiStats() {

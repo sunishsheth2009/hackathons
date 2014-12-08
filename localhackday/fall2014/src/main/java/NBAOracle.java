@@ -16,11 +16,13 @@ public class NBAOracle {
         nba = new League();
     }
 
-    public void sow() {
+    public void sow(boolean schedules) {
         s.getStats();
-        s.getScheds();
         s.writeStats();
-        s.writeScheds();
+        if(schedules) {
+            s.getScheds();
+            s.writeScheds();
+        }
     }
 
     public void harvest() {
@@ -52,9 +54,17 @@ public class NBAOracle {
             for(Team t : nba.getRankedTeams()) {
                 writer.write((rank++) + ". " + t.name());
                 writer.newLine();
-                writer.write("overall score: n/a");
+                writer.write("overall score: " + t.getOverall());
                 writer.newLine();
                 writer.write("winningness: " + t.getWinningness());
+                writer.newLine();
+                writer.write("offense: " + t.getOffense());
+                writer.newLine();
+                writer.write("defense: " + t.getDefense());
+                writer.newLine();
+                writer.write("secondary: " + t.getSecondary());
+                writer.newLine();
+                writer.write("efficiency: " + t.getEfficiency());
                 writer.newLine();
             }
         } catch(IOException e) {
@@ -69,7 +79,7 @@ public class NBAOracle {
 
     public static void main(String[] args) {
         NBAOracle oracle = new NBAOracle();
-        oracle.sow();
+        oracle.sow(false);
         oracle.harvest();
         oracle.forget();
         oracle.predict();

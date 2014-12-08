@@ -39,7 +39,6 @@ public class League {
     public void crunch() {
         for(String t : teams.keySet()) {
             teams.get(t).crunch();
-            teams.get(t).print();
         }
     }
 
